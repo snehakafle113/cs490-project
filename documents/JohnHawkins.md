@@ -1,0 +1,1 @@
+my job currently is as a member of UI for Team Steve in addition to being the Project Manager
