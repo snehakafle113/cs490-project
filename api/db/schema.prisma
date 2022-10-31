@@ -21,5 +21,23 @@ model Task {
   id         Int      @id @default(autoincrement())
   created_at DateTime @default(now())
   title      String
-  user_id    Int
+  user_id    String
+  status_id  Int
+  status     Status   @relation(fields: [status_id], references: [id])
+  urgency    String
+  priority   Int
+  date       DateTime
+}
+
+model Apointments {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime @default(now())
+  date       DateTime
+  user_id    String
+}
+
+model Status {
+  id          Int    @id @default(autoincrement())
+  status_name String
+  tasks       Task[]
 }
