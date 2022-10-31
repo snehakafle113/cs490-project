@@ -16,3 +16,10 @@ model UserExample {
   email String  @unique
   name  String?
 }
+
+model Task {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime @default(now())
+  title      String
+  user_id    Int
+}
