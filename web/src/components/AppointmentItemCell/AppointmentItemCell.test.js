@@ -37,5 +37,7 @@ describe('AppointmentItemCell', () => {
     expect(() => {
       render(<Success appointmentItem={standard().appointmentItem} />)
     }).not.toThrow()
+
+    expect(screen.getByText(standard().appointmentItem.title)).toBeInTheDocument()
   })
 })
