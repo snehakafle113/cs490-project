@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import TaskPage from /pages/Task;
-import CalendarPage from /pages/Calendar;
+//import TasksPage from /pages/Task;
+//import CalendarPage from /pages/Calendar;
 
 
 const Tab = styled.button`
@@ -20,15 +20,17 @@ const Tab = styled.button`
     opacity: 1;
   `}
 `;
-
+//<script src=""></script>
 function Views() {
   const [active, setActive] = useState(views[0]);
   function View(view){
     if (active == "Tasks View"){
-      return(TasksPage());
+      return("hi");
+      //return(TasksPage());
     }
     else{
-      return(CalendarPage());
+      return("bye");
+      //return(CalendarPage());
     }
   }
   return (
