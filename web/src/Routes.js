@@ -13,9 +13,19 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 import ViewsLayout from 'src/layouts/ViewsLayout'
 import homePage from 'src/pages/HomePage/homePage'
 
+import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage'
+import SignupPage from './pages/Registration/SignupPage'
+import ResetPasswordPage from './pages/ResetPasswordPage/ResetPasswordPage'
+import LoginPage from './pages/Sign-in/LoginPage'
+
 const Routes = () => {
   return (
     <Router>
+      <Route path="/login" page={LoginPage} name="login" />
+      <Route path="/" page={LoginPage} name="login" />
+      <Route path="/signup" page={SignupPage} name="signup" />
+      <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
+      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Set wrap={ViewsLayout}>
         <Route path="/" page={homePage} name="home" />
       </Set>
