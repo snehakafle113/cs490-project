@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+
+import styled from 'styled-components'
 //import TasksPage from /pages/Task;
 //import CalendarPage from /pages/Calendar;
-
 
 const Tab = styled.button`
   padding: 10px 30px;
@@ -19,17 +19,16 @@ const Tab = styled.button`
     border-bottom: 2px solid black;
     opacity: 1;
   `}
-`;
+`
 //<script src=""></script>
 function Views() {
-  const [active, setActive] = useState(views[0]);
-  function View(view){
-    if (active == "Tasks View"){
-      return("hi");
+  const [active, setActive] = useState(views[0])
+  function View(view) {
+    if (active == 'Tasks View') {
+      return 'hi'
       //return(TasksPage());
-    }
-    else{
-      return("bye");
+    } else {
+      return 'bye'
       //return(CalendarPage());
     }
   }
@@ -49,10 +48,9 @@ function Views() {
       <p />
       <p>{View()}</p>
     </>
-  );
+  )
 }
 
-const views = ["Tasks View","Calendar View"];
+const views = ['Tasks View', 'Calendar View']
 
-
-export default Views;
+export default Views
