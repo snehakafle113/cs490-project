@@ -23,6 +23,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.12",
     "styled-components": "^5.3.6"
   }
 }

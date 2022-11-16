@@ -20,7 +20,6 @@ const Tab = styled.button`
     opacity: 1;
   `}
 `
-//<script src=""></script>
 function Views() {
   const [active, setActive] = useState(views[0])
   function View(view) {
@@ -35,6 +34,7 @@ function Views() {
   return (
     <>
       <div>
+        <b>Planner</b>
         {views.map((view) => (
           <Tab
             key={view}
