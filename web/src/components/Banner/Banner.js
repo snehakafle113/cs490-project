@@ -1,9 +1,12 @@
+import {
+   Box
+} from '@chakra-ui/react'
+
 const Banner = () => {
   return (
-    <div>
-      <h2>{'Banner'}</h2>
-      <p>{'Find me in ./web/src/components/Banner/Banner.js'}</p>
-    </div>
+    <Box bg='#26619C' w='100%' p={4} color='white'>
+      <p>EnchantingTable</p>
+    </Box>
   )
 }
 
