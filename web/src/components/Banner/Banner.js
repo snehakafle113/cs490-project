@@ -3,8 +3,14 @@ import {
    HStack,
    Flex,
    Spacer,
-   Text
+   Text,
+   Icon,
+   Button,
+   ButtonGroup,
+   IconButton,
 } from '@chakra-ui/react'
+import { BsPersonBadge, } from 'react-icons/bs'
+import { CalendarIcon, SettingsIcon, LockIcon, } from '@chakra-ui/icons'
 import Logo from 'src/assets/logo.png'
 import React from 'react'
 const Banner = () => {
@@ -20,7 +26,17 @@ const Banner = () => {
           </Box>
         </HStack>
         <Spacer />
-          <img src={Logo} alt="image" width="50" height="50"/>
+        <HStack spacing = '17px'>
+        <Button leftIcon={<CalendarIcon />} variant='outline'>
+          Home
+        </Button>
+          <Button leftIcon={<SettingsIcon />}  variant='outline'>
+            Profile
+          </Button>
+          <Button leftIcon={<LockIcon />}  variant='outline'>
+            Sign Out
+          </Button>
+          </HStack>
       </Flex>
     </Box>
   )
