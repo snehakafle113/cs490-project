@@ -7,6 +7,7 @@ import * as theme from 'config/chakra.config'
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
+import './scaffold.css'
 import './index.css'
 
 const extendedTheme = extendTheme(theme)

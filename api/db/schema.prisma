@@ -29,7 +29,7 @@ model Task {
   date       DateTime
 }
 
-model Apointments {
+model Appointments {
   id         Int      @id @default(autoincrement())
   created_at DateTime @default(now())
   date       DateTime

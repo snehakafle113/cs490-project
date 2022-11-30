@@ -21,5 +21,14 @@
   "prisma": {
     "seed": "yarn rw exec seed"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.13",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/google-calendar": "^5.11.3",
+    "@fullcalendar/react": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "styled-components": "^5.3.6"
+  }
 }
