@@ -3,20 +3,21 @@ import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
-function weekView(){
+function CalendarView(){
     return (
         <div>
             <FullCalendar
-                defaultView="timeGridWeek"
-                header={{
+                initialView="dayGridMonth"
+                headerToolbar={{
                     left: "prev,next,today",
                     center: "title",
-                    right: "timeGridWeek,timeGridDay"
+                    right: "dayGridMonth,timeGridWeek,timeGridDay"
                 }}
+                allDaySlot={false}
                 plugins={[timeGridPlugin,dayGridPlugin]}
             />
         </div>
     );
 }
 
-export default weekView;
+export default CalendarView;
