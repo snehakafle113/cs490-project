@@ -9,3 +9,6 @@ Started working with UI team 3 on AppointmentItemCell. Will have to be revised i
 ## Sprint 2
 
 Worked with UI team 3 on AppointmentListCell. Pushed all completed changes so far to git.
+
+Started working with UI team 3 on AppointmentItemCell. Will have to be revised in the future.
+
