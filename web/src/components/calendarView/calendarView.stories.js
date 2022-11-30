@@ -1,7 +1,7 @@
-import WeekView from './weekView'
+import CalendarView from './calendarView'
 
 export const generated = () => {
-  return <WeekView />
+  return <CalendarView />
 }
 
-export default {title: 'Components/weekView' }
+export default {title: 'Components/calendarView' }
