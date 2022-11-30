@@ -23,7 +23,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.12",
+    "@chakra-ui/icons": "^2.0.13",
     "@fullcalendar/core": "^5.11.3",
     "@fullcalendar/daygrid": "^5.11.3",
     "@fullcalendar/google-calendar": "^5.11.3",
