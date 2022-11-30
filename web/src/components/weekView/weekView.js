@@ -9,10 +9,18 @@ function CalendarView(){
             <FullCalendar
                 initialView="dayGridMonth"
                 headerToolbar={{
-                    left: "prev,next,today",
+                    left: "prev,next,today,myCustomButton",
                     center: "title",
                     right: "dayGridMonth,timeGridWeek,timeGridDay"
                 }}
+                customButtons={{
+                    myCustomButton: {
+                      text: 'Date',
+                      click: function() {
+                        alert('Under Construction!') //need to allow you to select date
+                      },
+                    },
+                  }}
                 allDaySlot={false}
                 plugins={[timeGridPlugin,dayGridPlugin]}
             />
