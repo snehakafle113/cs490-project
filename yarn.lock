@@ -3237,6 +3237,70 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fullcalendar/common@npm:~5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/common@npm:5.11.3"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 3437775ce385bbfc18786cf9b8a9e5e1f9edafdb14f773f7835286fc38779741186ff09a43c630e84b40468274f60f22117cef7707beab64a5c579afb4d1396a
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/core@npm:^5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/core@npm:5.11.3"
+  dependencies:
+    "@fullcalendar/common": ~5.11.3
+    preact: ^10.0.5
+    tslib: ^2.1.0
+  checksum: 0a2e7a501463dd94150cbc1c2c4363a86fc8f4cee4a8a1fb9975bc10a1a80bd94bd719f7fa5e8342cac2e8f0edf5288ffb45f81f890d2a8a64f8c93aad191e37
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/daygrid@npm:^5.11.3, @fullcalendar/daygrid@npm:~5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/daygrid@npm:5.11.3"
+  dependencies:
+    "@fullcalendar/common": ~5.11.3
+    tslib: ^2.1.0
+  checksum: db790842307500311d0f92c3f036b07773783e4368582ceb3c6f5a3ba96b749eb58791290fa680efd62b988f856d50db1b34dddf353bd6c2729a15083fa24c40
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/google-calendar@npm:^5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/google-calendar@npm:5.11.3"
+  dependencies:
+    "@fullcalendar/common": ~5.11.3
+    tslib: ^2.1.0
+  checksum: ca22d6304473f1ba7fb76d0d6464837650e194fe25f47fa4f6317d3a280059c0aaaa3593a8f039e468dea986b6afc6d66343027a0edf6f3da8f7db40e2e1b841
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/react@npm:^5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/react@npm:5.11.3"
+  dependencies:
+    "@fullcalendar/common": ~5.11.3
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ^16.7.0 || ^17 || ^18
+    react-dom: ^16.7.0 || ^17 || ^18
+  checksum: 40d70fd4b034c3f7b1c4e3fb02306e4dd7f998c69409c62e424134a2c56bb382c32251348ab7d1e741014ac35b70c534006aa8f9bbacfa6f9466df3b11a0d1d7
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/timegrid@npm:^5.11.3":
+  version: 5.11.3
+  resolution: "@fullcalendar/timegrid@npm:5.11.3"
+  dependencies:
+    "@fullcalendar/common": ~5.11.3
+    "@fullcalendar/daygrid": ~5.11.3
+    tslib: ^2.1.0
+  checksum: d80fe783ac8ce3f51a891ba6942838eee9a8bfbf3cde564412e8855a5339ff28991c51cad32765a7ddbdf5091ebbad5e1c2262c8109bcfb34df8cc11b3e66d29
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1, @gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -20257,6 +20321,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"preact@npm:^10.0.5":
+  version: 10.11.3
+  resolution: "preact@npm:10.11.3"
+  checksum: 44f342de226a89b53a7156fad0d4192bfc8233a5cc3eb46162f53d3c0c1c2956222d997927c7dff20f52c3592f112cefec5adac64f0477cbd8370fb39126ef7b
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -21691,6 +21762,11 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@chakra-ui/icons": ^2.0.13
+    "@fullcalendar/core": ^5.11.3
+    "@fullcalendar/daygrid": ^5.11.3
+    "@fullcalendar/google-calendar": ^5.11.3
+    "@fullcalendar/react": ^5.11.3
+    "@fullcalendar/timegrid": ^5.11.3
     "@redwoodjs/core": 3.2.0
     styled-components: ^5.3.6
   languageName: unknown
