@@ -1,7 +1,7 @@
-import Views from './homePage'
+import HomePage from './homePage'
 
 export const generated = () => {
-  return <Views />
+  return <HomePage />
 }
 
 export default { title: 'Pages/homePage' }
