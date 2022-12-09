@@ -11,3 +11,4 @@
 12/8:   Started to create the TaskView for homePage.js Currently created a basic component, along with mounting the already made TasksCell component to this component.
         Still need to create the newTask/editTask drawer, as well as mount the Appointment list thats still in development as far as I'm aware
 
+12/9:   Created NewTask drawer, still need to wait on other work to be completed elsewhere in order to mount the appointment list as well as an edit task drawer.
