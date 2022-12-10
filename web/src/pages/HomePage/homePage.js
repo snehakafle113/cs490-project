@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 
 import styled from 'styled-components'
-//import TasksPage from /pages/Task;
+
+//import AppointmentsItemCell from 'src/components/AppointmentItemCell'
+import AuthorizeCell from 'src/components/AuthorizeCell/AuthorizeCell'
+
 //import CalendarPage from /pages/Calendar;
 
 const Tab = styled.button`
@@ -22,6 +25,7 @@ const Tab = styled.button`
 `
 function Views() {
   const [active, setActive] = useState(views[0])
+
   function View(view) {
     if (active == 'Tasks View') {
       return 'hi'
@@ -31,8 +35,10 @@ function Views() {
       //return(CalendarPage());
     }
   }
+  const user_id = '1111'
   return (
     <>
+      <AuthorizeCell></AuthorizeCell>
       <div>
         <b>Planner</b>
         {views.map((view) => (
@@ -54,3 +60,5 @@ function Views() {
 const views = ['Tasks View', 'Calendar View']
 
 export default Views
+
+//<AppointmentsItemCell user_id={user_id}></AppointmentsItemCell>
