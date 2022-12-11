@@ -1,64 +1,40 @@
-import React, { useState } from 'react'
+// import { Link, routes } from '@redwoodjs/router'
+import { MetaTags } from '@redwoodjs/web'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Center, Button } from '@chakra-ui/react'
+//import TaskView from '../../components/Task'
+import CalendarView from '../../components/calendarView'
+import { Text, Input } from "@chakra-ui/react"
 
-import styled from 'styled-components'
+const HomePage = () => {
 
-//import AppointmentsItemCell from 'src/components/AppointmentItemCell'
-import AuthorizeCell from 'src/components/AuthorizeCell/AuthorizeCell'
-
-//import CalendarPage from /pages/Calendar;
-
-const Tab = styled.button`
-  padding: 10px 30px;
-  cursor: pointer;
-  opacity: 0.6;
-  background: white;
-  border: 0;
-  outline: 0;
-  border-bottom: 2px solid transparent;
-  transition: ease border-bottom 250ms;
-  ${({ active }) =>
-    active &&
-    `
-    border-bottom: 2px solid black;
-    opacity: 1;
-  `}
-`
-function Views() {
-  const [active, setActive] = useState(views[0])
-
-  function View(view) {
-    if (active == 'Tasks View') {
-      return 'hi'
-      //return(TasksPage());
-    } else {
-      return 'bye'
-      //return(CalendarPage());
-    }
-  }
-  const user_id = '1111'
   return (
     <>
-      <AuthorizeCell></AuthorizeCell>
-      <div>
-        <b>Planner</b>
-        {views.map((view) => (
-          <Tab
-            key={view}
-            active={active === view}
-            onClick={() => setActive(view)}
-          >
-            {view}
-          </Tab>
-        ))}
-      </div>
-      <p />
-      <p>{View()}</p>
+      <MetaTags title="Home" description="Home page" />
+      <Tabs>
+        <TabList>
+          <Text fontWeight="extrabold" mt='2'>Planner</Text>
+          <Tab>Calendar</Tab>
+          <Tab>Tasks</Tab>
+        </TabList>
+      <TabPanels>
+        <TabPanel>
+          <Center>
+              <Box w="85%">
+                <CalendarView/>
+              </Box>
+          </Center>
+        </TabPanel>
+        <TabPanel>
+          <Center>
+            <Box w="85%">
+              <></>
+            </Box>
+          </Center>
+        </TabPanel>
+      </TabPanels>
+      </Tabs>
     </>
   )
 }
 
-const views = ['Tasks View', 'Calendar View']
-
-export default Views
-
-//<AppointmentsItemCell user_id={user_id}></AppointmentsItemCell>
+export default HomePage
