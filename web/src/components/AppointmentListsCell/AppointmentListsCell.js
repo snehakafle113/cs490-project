@@ -12,7 +12,20 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () =>
+<div>
+      <Box p="5" borderWidth="1px">
+        <ul>
+          <Text fontSize="xl" fontWeight="semibold" lineHeight="long">
+            Appointments
+          </Text>
+          <li style={{"list-style-type": "none"}}><br></br></li>
+          <Text fontSize="l" lineHeight="long">
+            Loading...
+          </Text>
+        </ul>
+      </Box>
+    </div>
 
 export const Empty = () => (
     <div>
@@ -31,7 +44,19 @@ export const Empty = () => (
 )
 
 export const Failure = ({ error }) => (
-  <div style={{ color: 'red' }}>Error: {error?.message}</div>
+  <div>
+      <Box p="5" borderWidth="1px">
+        <ul>
+          <Text fontSize="xl" fontWeight="semibold" lineHeight="long">
+            Appointments
+          </Text>
+          <li style={{"list-style-type": "none"}}><br></br></li>
+          <Text style={{color: 'red'}}fontSize="l" lineHeight="long">
+            Faliure to load Appoinment List
+          </Text>
+        </ul>
+      </Box>
+    </div>
 )
 
 export const Success = ({ appointmentLists }) => {
