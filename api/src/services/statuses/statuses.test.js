@@ -27,20 +27,20 @@ describe('statuses', () => {
 
   scenario('creates a status', async () => {
     const result = await createStatus({
-      input: { status_name: 'String' },
+      input: { status_name: 'Not completed' },
     })
 
-    expect(result.status_name).toEqual('String')
+    expect(result.status_name).toEqual('Not completed')
   })
 
   scenario('updates a status', async (scenario) => {
     const original = await status({ id: scenario.status.one.id })
     const result = await updateStatus({
       id: original.id,
-      input: { status_name: 'String2' },
+      input: { status_name: 'Completed' },
     })
 
-    expect(result.status_name).toEqual('String2')
+    expect(result.status_name).toEqual('Completed')
   })
 
   scenario('deletes a status', async (scenario) => {
