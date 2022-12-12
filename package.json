@@ -30,6 +30,7 @@
     "@fullcalendar/react": "^5.11.3",
     "@fullcalendar/timegrid": "^5.11.3",
     "googleapis": "^109.0.1",
+    "react-query": "^3.39.2",
     "styled-components": "^5.3.6"
   }
 }
