@@ -22,7 +22,7 @@ const Banner = () => {
             <img src={Logo} alt="image" width="50" height="50"/>
             </Box>
           <Box>
-            <Text fontsize='4xl' as='b'>EnchantingTable</Text>
+            <Text fontSize='4xl' as='b'>EnchantingTable</Text>
           </Box>
         </HStack>
         <Spacer />
