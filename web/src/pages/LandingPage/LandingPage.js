@@ -43,6 +43,17 @@ class LandingPage extends Component {
               </Button>
             </Flex>
             <Spacer />
+            <p
+              style={{
+                textAlign: 'center',
+                lineHeight: '400px',
+                fontSize: '35px',
+                fontWeight: 700,
+              }}
+            >
+              Schedules all your ToDo’s as if by magic, giving you maximum
+              efficiency!
+            </p>
           </div>
         </Box>
       </React.Fragment>
