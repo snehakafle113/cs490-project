@@ -9,7 +9,7 @@ import {
 import { Button, useDisclosure } from '@chakra-ui/react'
 import { SimpleGrid } from '@chakra-ui/react'
 
-import AppointmentsCell from '../Appointment/AppointmentsCell'
+import AppointmentItemCell from '../AppointmentItemCell'
 import NewTask from '../Task/NewTask'
 import TasksCell from '../Task/TasksCell'
 
@@ -17,9 +17,9 @@ const TaskView = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <view>
-      <SimpleGrid columns={2} spacingX="40px" spacingY="20px">
+      <SimpleGrid columns={2} spacingX="10px" spacingY="20px">
         <TasksCell />
-        <AppointmentsCell />
+        <AppointmentItemCell user_id={'1111'}></AppointmentItemCell>
       </SimpleGrid>
 
       <Button onClick={onOpen}>New Task</Button>
