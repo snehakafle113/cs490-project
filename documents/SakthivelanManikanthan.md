@@ -14,3 +14,8 @@
    <#Route path="/signIn" page={SignInPage} name="Sign In" />
 
 #created branch for home landing page
+
+#created a header w/ company logo, name, and sign in button
+#downloaded image to use as background
+#added image as background to the page
+#added company slogan to the center of the page
