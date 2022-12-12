@@ -1,11 +1,10 @@
 // import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Center, Button } from '@chakra-ui/react'
-//import TaskView from '../../components/Task'
-import { CalendarView } from '../../components/calendarView'
 import { Text, Input } from "@chakra-ui/react"
 import AuthorizeCell from 'src/components/AuthorizeCell'
 import AppointmentItemCell from 'src/components/AppointmentItemCell'
+import CalendarViewCell from 'src/components/CalendarViewCell'
 
 const HomePage = () => {
 
@@ -24,7 +23,7 @@ const HomePage = () => {
         <TabPanel>
           <Center>
               <Box w="85%">
-                <CalendarView user_id={'1111'}></CalendarView>
+                <CalendarViewCell user_id={'1111'}></CalendarViewCell>
               </Box>
           </Center>
         </TabPanel>
