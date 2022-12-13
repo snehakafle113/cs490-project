@@ -1,6 +1,4 @@
-// Define your own mock data here:
 export const standard = () => ({
-  
   appointments: [{
     id: 42,
     summary: 'Mock Event',
