@@ -1,6 +1,9 @@
-import { Success } from './CalendarViewCell'
+import { Success, Failure } from './CalendarViewCell'
 import { standard } from './CalendarViewCell.mock'
 
+export const failure = () => {
+  return Failure ? <Failure /> : <></>
+}
 export const success = (args) => {
   return Success ? <Success {...standard()} {...args} /> : <></>
 }

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { Button, Box, Input, Flex } from '@chakra-ui/react'
+import { Button, Box, Input, Flex, Text, Center } from '@chakra-ui/react'
 
 export const QUERY = gql`
   query FindAppointments($user_id: String!) {
@@ -28,6 +28,23 @@ export function mapData(appointments){
   })
   return events
 }
+
+export const Failure = () => (
+  <div>
+    <Center>
+      <Box p="5" maxW="320px" height="100" borderWidth="1px">
+        <Text
+          style={{ color: 'red' }}
+          fontSize="l"
+          fontWeight="semibold"
+          lineHeight="short"
+        >
+          Make sure to sign in to view Calendar
+        </Text>
+      </Box>
+    </Center>
+  </div>
+)
 
 export const Success = ({ appointments }) => {
   const calendarRef = useRef();
