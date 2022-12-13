@@ -1,21 +1,18 @@
 // import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Center, Button } from '@chakra-ui/react'
-import { Text, Input } from "@chakra-ui/react"
-import AuthorizeCell from 'src/components/AuthorizeCell'
-import AppointmentItemCell from 'src/components/AppointmentItemCell'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Center } from '@chakra-ui/react'
+import { Text } from "@chakra-ui/react"
 import CalendarViewCell from 'src/components/CalendarViewCell'
 
 const HomePage = () => {
-
   return (
     <>
       <MetaTags title="Home" description="Home page" />
-      <AuthorizeCell user_id={'1111'}></AuthorizeCell>
-      <AppointmentItemCell user_id={'1111'}></AppointmentItemCell>
       <Tabs>
         <TabList>
-          <Text fontWeight="extrabold" mt='2'>Planner</Text>
+          <Text fontWeight="extrabold" mt='2'>
+            Planner
+          </Text>
           <Tab>Calendar</Tab>
           <Tab>Tasks</Tab>
         </TabList>
