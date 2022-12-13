@@ -6,6 +6,7 @@
     "@googleapis/calendar": "^3.0.0",
     "@redwoodjs/api": "3.2.0",
     "@redwoodjs/graphql-server": "3.2.0",
-    "cross-undici-fetch": "^0.4.14"
+    "cross-undici-fetch": "^0.4.14",
+    "firebase-admin": "^11.3.0"
   }
 }
