@@ -1,4 +1,3 @@
-// // import { Link, routes } from '@redwoodjs/router'
 import {
   Tabs,
   TabList,
@@ -6,16 +5,19 @@ import {
   Tab,
   TabPanel,
   Box,
-  Center,
-  Button,
+  Center
 } from '@chakra-ui/react'
 
+import { Text } from '@chakra-ui/react'
+
 import { MetaTags } from '@redwoodjs/web'
+
+import TaskView from 'src/components/TaskView'
+
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
 //import TaskView from '../../components/Task'
 import CalendarView from '../../components/calendarView'
-import { Text, Input } from "@chakra-ui/react"
 
 const HomePage = () => {
   return (
@@ -40,6 +42,7 @@ const HomePage = () => {
           <TabPanel>
             <Center>
               <Box w="85%">
+                <TaskView />
                 <></>
               </Box>
             </Center>

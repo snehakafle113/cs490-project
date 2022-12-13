@@ -86,7 +86,7 @@ export function mapData(appointments) {
 export const Success = ({ appointments }) => {
   return (
     <div>
-      <Box w="45%">
+      <Box w="100%">
         <TableContainer>
           <Table variant="striped">
             <TableCaption>Table of Appointments</TableCaption>
@@ -108,10 +108,8 @@ export const Success = ({ appointments }) => {
                 mapData(appointments)
                 return (
                   <Tr key={item.id}>
-                    <Td>{item.id}</Td>
                     <Td>{item.summary}</Td>
                     <Td>{item.start}</Td>
-                    <Td>{item.user_id}</Td>
                     <Td>{item.end}</Td>
                   </Tr>
                 )
