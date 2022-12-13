@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 
-import { LockIcon } from '@chakra-ui/icons'
-import { Flex, HStack, Spacer, Text, Box, Button } from '@chakra-ui/react'
-
+import {
+  Box,
+  HStack,
+  Flex,
+  Spacer,
+  Text,
+  Icon,
+  Button,
+  ButtonGroup,
+  IconButton,
+} from '@chakra-ui/react'
+import { LockIcon, } from '@chakra-ui/icons'
 import Background from 'src/assets/background.png'
 import Logo from 'src/assets/logo.png'
+import { useAuth } from '@redwoodjs/auth'
 
-//import { Link, routes } from '@redwoodjs/router'
-//import { MetaTags } from '@redwoodjs/web'
-
-class LandingPage extends Component {
-  render() {
-    //let heading = 'Soaring to new heights'
-    //let subheading =
-    //'Lorem ipsum asoidj iASJBFodsjf sajnfaisudhf aksdjfnasdiuf aisudjocaisdjff fa, sdfoijasdf asclvkjo DFuhdfjsndf oijOIDF ndf oijdflsk.'
-
+const LandingPage = () => {
+    const { loading, isAuthenticated, logIn, logOut, currentUser } = useAuth()
     return (
       <React.Fragment>
         <Box>
@@ -25,23 +28,34 @@ class LandingPage extends Component {
               height: '750px',
             }}
           >
+          <Box w='100%' p={4} color='white'>
             <Flex>
-              <HStack spacing="17px">
+              <HStack spacing = '17px'>
                 <Box>
-                  <img src={Logo} alt="image" width="50" height="50" />
-                </Box>
+                  <img src={Logo} alt="image" width="50" height="50"/>
+                  </Box>
                 <Box>
-                  <Text fontsize="4xl" as="b">
-                    EnchantingTable
-                  </Text>
-                  <Spacer />
+                  <Text fontsize='4xl' as='b'>EnchantingTable</Text>
                 </Box>
               </HStack>
               <Spacer />
-              <Button leftIcon={<LockIcon />} variant="outline">
-                Sign In
-              </Button>
+              <HStack spacing = '17px'>
+                <Button
+                  leftIcon={<LockIcon />}
+                  onClick={async () => {
+                    if (isAuthenticated) {
+                      await logOut()
+                    } else {
+                      await logIn()
+                    }
+                  }}
+                  variant='outline'
+                >
+                {isAuthenticated ? currentUser.uid : 'Sign in'}
+                </Button>
+              </HStack>
             </Flex>
+          </Box>
             <Spacer />
             <p
               style={{
@@ -58,23 +72,6 @@ class LandingPage extends Component {
         </Box>
       </React.Fragment>
     )
-  }
 }
 
 export default LandingPage
-
-/*<div>
-        <section className="hero">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">{heading}</h1>
-              <div className="is-two-thirds column is-paddingless">
-                <h2 className="subtitle is-4">{subheading}</h2>
-              </div>
-              <Button className="button is-large is-primary" id="learn">
-                Learn more
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>*/
