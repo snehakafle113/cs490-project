@@ -1,4 +1,4 @@
-// import { Link, routes } from '@redwoodjs/router'
+// // import { Link, routes } from '@redwoodjs/router'
 import {
   Tabs,
   TabList,
@@ -9,31 +9,17 @@ import {
   Center,
   Button,
 } from '@chakra-ui/react'
-import { Text, Input } from '@chakra-ui/react'
 
-import { useAuth } from '@redwoodjs/auth'
 import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
 //import TaskView from '../../components/Task'
 import CalendarView from '../../components/calendarView'
+import { Text, Input } from "@chakra-ui/react"
 
 const HomePage = () => {
-  const { loading, isAuthenticated, logIn, logOut, currentUser } = useAuth()
-
   return (
     <>
-      <Button
-        onClick={async () => {
-          if (isAuthenticated) {
-            await logOut()
-          } else {
-            await logIn()
-          }
-        }}
-      >
-        {isAuthenticated ? currentUser.uid : 'Log in'}
-      </Button>
       <MetaTags title="Home" description="Home page" />
       <Tabs>
         <TabList>
