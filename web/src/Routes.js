@@ -8,7 +8,7 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Set, Router, Route } from '@redwoodjs/router'
-
+import { useNavigate } from 'react-router-dom'
 import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 import ViewsLayout from 'src/layouts/ViewsLayout'
 import homePage from 'src/pages/HomePage/homePage'
@@ -18,6 +18,7 @@ const Routes = () => {
     <Router>
       <Set wrap={ViewsLayout}>
         <Route path="/" page={homePage} name="home" />
+        <Route path="/profile" page={ProfilePage} name="profile" />
       </Set>
       <Set wrap={ScaffoldLayout} title="Tasks" titleTo="tasks" buttonLabel="New Task" buttonTo="newTask">
         <Route path="/tasks/new" page={TaskNewTaskPage} name="newTask" />

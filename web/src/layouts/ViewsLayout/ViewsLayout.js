@@ -9,7 +9,22 @@ const ViewLayout = ({ children }) => {
   return (
     <>
       <header>
-        <Banner />
+      <Stack
+            bg="black"
+            p={[5]}
+            m={[2, 0]}
+            pl={[1300]}
+            direction="row"
+            spacing={4}
+          >
+            <Button leftIcon={<CalendarIcon />}>
+              <Link to={routes.home()}>Home</Link>
+            </Button>
+
+            <Button>
+              <Link to={routes.profile()}>Profile</Link>
+            </Button>
+          </Stack>
       </header>
       <main>{children}</main>
     </>

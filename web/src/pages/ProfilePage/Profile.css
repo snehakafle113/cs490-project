@@ -1,0 +1,43 @@
+input {
+  background-color:#dddee4;
+  border-radius: 0.3rem;
+  border-color: black;
+  border-width: 0.1rem;
+  text-align: center;
+}
+
+label {
+  margin-top: 1.5rem;
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: fit-content;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
+input.error, textarea.error {
+  border: 1px solid red;
+}
+
+form {
+  border:2px solid grey;
+  padding-bottom: 2rem;
+  text-align: center;
+  margin:0.5rem 25rem;
+  }
+
+
+  .btn{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.title{
+  margin: 1rem 3rem;
+  font-size: 1.75rem;
+}

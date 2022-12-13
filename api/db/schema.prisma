@@ -29,15 +29,27 @@ model Task {
   date       DateTime
 }
 
-model Appointments {
-  id         Int      @id @default(autoincrement())
-  created_at DateTime @default(now())
-  date       DateTime
-  user_id    String
+model Appointment {
+  id          Int    @id @default(autoincrement())
+  summary     String
+  description String
+  start       String
+  end         String
+  user_id     String
 }
 
 model Status {
   id          Int    @id @default(autoincrement())
   status_name String
   tasks       Task[]
+}
+
+model Profile {
+  id            Int     @id @default(autoincrement())
+  FName         String
+  LName         String
+  currPass      String
+  newPass       String
+  confirmPass   String
+  createdAt DateTime @default(now())
 }
