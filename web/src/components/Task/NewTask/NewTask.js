@@ -11,7 +11,6 @@ const CREATE_TASK_MUTATION = gql`
     }
   }
 `
-
 const NewTask = () => {
   const [createTask, { loading, error }] = useMutation(CREATE_TASK_MUTATION, {
     onCompleted: () => {

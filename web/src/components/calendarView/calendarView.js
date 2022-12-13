@@ -16,6 +16,8 @@ function CalendarView(){
             value={date}
             size='sm'
             type="date"
+            bg='white'
+            color='black'
             marginRight={1}
             onChange={dateChange}
           />
