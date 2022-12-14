@@ -24,11 +24,11 @@ const TaskView = () => {
   }
   return (
     <div>
+      <Button marginBottom={3} marginLeft={5} onClick={onOpen}>New Task</Button>
       <SimpleGrid columns={2} spacingX="10px" spacingY="20px">
         <TasksCell user_id={uid}></TasksCell>
         <AppointmentItemCell user_id={uid}></AppointmentItemCell>
       </SimpleGrid>
-      <Button onClick={onOpen}>New Task</Button>
       <Drawer isOpen={isOpen} onClose={onClose} size={'lg'}>
         <DrawerOverlay />
         <DrawerContent>
