@@ -1,6 +1,6 @@
 export const standard = defineScenario({
   status: {
-    one: { data: { status_name: 'String' } },
-    two: { data: { status_name: 'String' } },
+    one: { data: { status_name: 'Not completed' } },
+    two: { data: { status_name: 'Completed' } },
   },
 })

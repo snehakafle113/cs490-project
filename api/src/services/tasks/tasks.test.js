@@ -22,31 +22,31 @@ describe('tasks', () => {
   scenario('creates a task', async (scenario) => {
     const result = await createTask({
       input: {
-        title: 'String',
-        user_id: 'String',
+        title: 'Do the program assignment',
+        user_id: '3',
         status_id: scenario.task.two.status_id,
-        urgency: 'String',
-        priority: 1266382,
-        date: '2022-11-16T04:28:46.587Z',
+        urgency: 'A',
+        priority: 2,
+        date: '2022-12-10T04:28:46.587Z',
       },
     })
 
-    expect(result.title).toEqual('String')
-    expect(result.user_id).toEqual('String')
+    expect(result.title).toEqual('Do the program assignment')
+    expect(result.user_id).toEqual('3')
     expect(result.status_id).toEqual(scenario.task.two.status_id)
-    expect(result.urgency).toEqual('String')
-    expect(result.priority).toEqual(1266382)
-    expect(result.date).toEqual(new Date('2022-11-16T04:28:46.587Z'))
+    expect(result.urgency).toEqual('A')
+    expect(result.priority).toEqual(2)
+    expect(result.date).toEqual(new Date('2022-12-10T04:28:46.587Z'))
   })
 
   scenario('updates a task', async (scenario) => {
     const original = await task({ id: scenario.task.one.id })
     const result = await updateTask({
       id: original.id,
-      input: { title: 'String2' },
+      input: { title: 'Task 2' },
     })
 
-    expect(result.title).toEqual('String2')
+    expect(result.title).toEqual('Task 2')
   })
 
   scenario('deletes a task', async (scenario) => {

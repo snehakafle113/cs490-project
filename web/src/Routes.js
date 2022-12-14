@@ -16,6 +16,7 @@ import homePage from 'src/pages/HomePage/homePage'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/landing" page={LandingPage} name="landing" />
       <Set wrap={ViewsLayout}>
         <Route path="/" page={homePage} name="home" />
       </Set>
