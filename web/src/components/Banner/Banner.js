@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { BsPersonBadge, } from 'react-icons/bs'
 import { CalendarIcon, SettingsIcon, LockIcon, } from '@chakra-ui/icons'
+import { Link, routes } from '@redwoodjs/router'
 import Logo from 'src/assets/logo.png'
 import React from 'react'
 import { useAuth } from '@redwoodjs/auth'
@@ -30,12 +31,8 @@ const Banner = () => {
        </HStack>
        <Spacer />
        <HStack spacing = '17px'>
-       <Button leftIcon={<CalendarIcon />} variant='outline'>
-         Home
-       </Button>
-         <Button leftIcon={<SettingsIcon />}  variant='outline'>
-           Profile
-         </Button>
+       <Link to={routes.home()}><Button leftIcon={<SettingsIcon />}  variant='outline'>Home</Button></Link>
+          <Link to={routes.profile()}><Button leftIcon={<SettingsIcon />}  variant='outline'>Profile</Button></Link>
          <Button
            leftIcon={<LockIcon />}
            onClick={async () => {
