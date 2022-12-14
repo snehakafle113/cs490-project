@@ -86,7 +86,7 @@ const handleNewPassChange=(e)=>{
       <MetaTags title="Profile" description="Profile Page" />
       <div className={`ProfilePage ${theme}`}>
 
-      <Button className="toggle"onClick={toggleTheme}>Theme Mode</Button>
+      <Button className="toggle"onClick={toggleTheme}>Switch Mode</Button>
        <AuthorizeCell/>
       </div>
 
