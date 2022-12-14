@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { useAuth } from '@redwoodjs/auth'
+import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 
 export const QUERY = gql`
@@ -30,6 +32,10 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 export const Success = ({ getEvents }) => {
+  const { isAuthenticated, currentUser } = useAuth()
+  if (!isAuthenticated) {
+    navigate(routes.landing())
+  }
   const [load, setload] = useState(true)
   const [createAppointment, { loading, error }] = useMutation(
     CREATE_APPOINTMENT_MUTATION,
@@ -38,6 +44,7 @@ export const Success = ({ getEvents }) => {
       onError: () => {},
     }
   )
+  const userid = currentUser.uid
   return (
     <>
       {load ? (
@@ -47,7 +54,7 @@ export const Success = ({ getEvents }) => {
             description: '',
             start: item.start,
             end: item.end,
-            user_id: '1111',
+            user_id: userid,
           }
           setload(false)
           //console.log(item)

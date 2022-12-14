@@ -3980,6 +3980,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@googleapis/calendar@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@googleapis/calendar@npm:3.0.0"
+  dependencies:
+    googleapis-common: ^6.0.3
+  checksum: 29c383a7d799f36ad048a6ab98b627d34e50e4e52c26146fd77966536ec16688f32073a54b068e1355648bdc0e45d7e660c0ba241f8c633811804a60aca7ab7e
+  languageName: node
+  linkType: hard
+
 "@graphql-codegen/add@npm:3.2.1":
   version: 3.2.1
   resolution: "@graphql-codegen/add@npm:3.2.1"
@@ -9428,8 +9437,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
+    "@googleapis/calendar": ^3.0.0
     "@redwoodjs/api": 3.2.0
     "@redwoodjs/graphql-server": 3.2.0
+    cross-undici-fetch: ^0.4.14
     firebase-admin: ^11.3.0
   languageName: unknown
   linkType: soft
@@ -12090,7 +12101,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-undici-fetch@npm:0.4.14":
+"cross-undici-fetch@npm:0.4.14, cross-undici-fetch@npm:^0.4.14":
   version: 0.4.14
   resolution: "cross-undici-fetch@npm:0.4.14"
   dependencies:
@@ -15643,6 +15654,30 @@ __metadata:
   bin:
     gp12-pem: build/src/bin/gp12-pem.js
   checksum: 2cd15077cb2179306870223c65b49d38f0860bd8cc60da8072cc632c9aad8cb7e61e46e63d72e8ef3fca27ad9e6b8870db6cc809839f279382d9cc4d891a9a7b
+  languageName: node
+  linkType: hard
+
+"googleapis-common@npm:^6.0.0, googleapis-common@npm:^6.0.3":
+  version: 6.0.4
+  resolution: "googleapis-common@npm:6.0.4"
+  dependencies:
+    extend: ^3.0.2
+    gaxios: ^5.0.1
+    google-auth-library: ^8.0.2
+    qs: ^6.7.0
+    url-template: ^2.0.8
+    uuid: ^9.0.0
+  checksum: 7db7b6010d0ea00c01c74cb4ed1a7f8df7d6477a13b49a9bcf799cade322eb3e3a89655651f20cb5208f6d7d68b5a96f44befa35578bc290c732f7547fa31795
+  languageName: node
+  linkType: hard
+
+"googleapis@npm:^109.0.1":
+  version: 109.0.1
+  resolution: "googleapis@npm:109.0.1"
+  dependencies:
+    google-auth-library: ^8.0.2
+    googleapis-common: ^6.0.0
+  checksum: bc28d044d99a2325538277c3a86fbcdf21d7f3e03e6513ba547d2186b95302850effa5ed096a73e059b2b3312ccbc9247782907a34f2af78864febf6dcbbfaff
   languageName: node
   linkType: hard
 
@@ -22012,7 +22047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:6.11.0, qs@npm:^6.10.0":
+"qs@npm:6.11.0, qs@npm:^6.10.0, qs@npm:^6.7.0":
   version: 6.11.0
   resolution: "qs@npm:6.11.0"
   dependencies:
@@ -23099,6 +23134,7 @@ __metadata:
     "@fullcalendar/react": ^5.11.3
     "@fullcalendar/timegrid": ^5.11.3
     "@redwoodjs/core": 3.2.0
+    googleapis: ^109.0.1
     styled-components: ^5.3.6
   languageName: unknown
   linkType: soft
@@ -25812,6 +25848,13 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: bd5aa9389f896974beb851c112f63b466505a04b4807cea2e5a3b7092f6fbb75316f0491ea84e44f66fed55f1b440df5195d7e3a8203f64fcefa19d182f5be87
+  languageName: node
+  linkType: hard
+
+"url-template@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "url-template@npm:2.0.8"
+  checksum: 56a15057eacbcf05d52b0caed8279c8451b3dd9d32856a1fdd91c6dc84dcb1646f12bafc756b7ade62ca5b1564da8efd7baac5add35868bafb43eb024c62805b
   languageName: node
   linkType: hard
 

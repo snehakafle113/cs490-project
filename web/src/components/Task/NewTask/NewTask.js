@@ -15,7 +15,7 @@ const NewTask = () => {
   const [createTask, { loading, error }] = useMutation(CREATE_TASK_MUTATION, {
     onCompleted: () => {
       toast.success('Task created')
-      navigate(routes.tasks())
+      navigate(routes.landing())
     },
     onError: (error) => {
       toast.error(error.message)

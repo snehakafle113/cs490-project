@@ -5,21 +5,23 @@ import {
   Tab,
   TabPanel,
   Box,
-  Center
+  Center,
 } from '@chakra-ui/react'
-
 import { Text } from '@chakra-ui/react'
 
+import { useAuth } from '@redwoodjs/auth'
 import { MetaTags } from '@redwoodjs/web'
-
-import TaskView from 'src/components/TaskView'
-
 import { toast, Toaster } from '@redwoodjs/web/toast'
+
+import AuthorizeCell from 'src/components/AuthorizeCell'
+import TaskView from 'src/components/TaskView'
 
 //import TaskView from '../../components/Task'
 import CalendarView from '../../components/calendarView'
 
 const HomePage = () => {
+  const { isAuthenticated, currentUser } = useAuth()
+  //const uid = currentUser.uid
   return (
     <>
       <MetaTags title="Home" description="Home page" />
@@ -28,27 +30,28 @@ const HomePage = () => {
           <Text fontWeight="extrabold" mt="2">
             Planner
           </Text>
-          <Tab>Calendar</Tab>
           <Tab>Tasks</Tab>
+          <Tab>Calender</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
             <Center>
               <Box w="85%">
-                <CalendarView />
+                <TaskView />
               </Box>
             </Center>
           </TabPanel>
           <TabPanel>
             <Center>
               <Box w="85%">
-                <TaskView />
+                <CalendarView />
                 <></>
               </Box>
             </Center>
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <AuthorizeCell user_id={'H4naFqJO3VfzjbPm9bQ3Zc13G8v2	'}></AuthorizeCell>
     </>
   )
 }

@@ -1,3 +1,4 @@
+import { useAuth } from '@redwoodjs/auth'
 import {
   Form,
   FormError,
@@ -7,6 +8,7 @@ import {
   NumberField,
   DatetimeLocalField,
   Submit,
+  HiddenField,
 } from '@redwoodjs/forms'
 
 const formatDatetime = (value) => {
@@ -16,6 +18,7 @@ const formatDatetime = (value) => {
 }
 
 const TaskForm = (props) => {
+  const { loading, isAuthenticated, currentUser } = useAuth()
   const onSubmit = (data) => {
     props.onSave(data, props?.task?.id)
   }
@@ -29,7 +32,6 @@ const TaskForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-
         <Label
           name="title"
           className="rw-label"
@@ -48,21 +50,13 @@ const TaskForm = (props) => {
 
         <FieldError name="title" className="rw-field-error" />
 
-        <Label
+        <HiddenField
           name="user_id"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          User id
-        </Label>
-
-        <TextField
-          name="user_id"
-          defaultValue={props.task?.user_id}
+          defaultValue={'1'}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        ></HiddenField>
 
         <FieldError name="user_id" className="rw-field-error" />
 

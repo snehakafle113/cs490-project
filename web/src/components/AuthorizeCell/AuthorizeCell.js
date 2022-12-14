@@ -3,6 +3,8 @@ import { useState } from 'react'
 
 import { Button } from '@chakra-ui/react'
 
+import { useAuth } from '@redwoodjs/auth'
+import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
@@ -22,8 +24,8 @@ const DELETE_APPOINTMENTS_MUTATION = gql`
   }
 `
 
-const start = '2022-11-01T12:00:00Z'
-const end = '2022-12-01T12:00:00Z'
+const start = '2022-12-01T12:00:00Z'
+const end = '2023-1-01T12:00:00Z'
 const queryParams = new URLSearchParams(window.location.search)
 const code = queryParams.get('code')
 export const Loading = () => <div>Loading...</div>
@@ -32,6 +34,10 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 export const Success = ({ getAuthorizationURL }) => {
+  const { isAuthenticated, currentUser } = useAuth()
+  if (!isAuthenticated) {
+    navigate(routes.landing())
+  }
   const [deleteAppointments] = useMutation(DELETE_APPOINTMENTS_MUTATION, {
     onCompleted: () => {},
     onError: () => {},
@@ -41,7 +47,7 @@ export const Success = ({ getAuthorizationURL }) => {
   const [getCall, setgetCall] = useState(false)
   const sync = () => {
     window.location.href = getAuthorizationURL.url
-    const user_id = '1111'
+    const user_id = currentUser.uid
     deleteAppointments({ variables: { user_id } })
   }
   //const add = () => {}
