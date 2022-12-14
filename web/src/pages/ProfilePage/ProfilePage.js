@@ -44,7 +44,7 @@ const handleNewPassChange=(e)=>{
     console.log(data)
   }
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('default');
   const toggleTheme = () => {
  if (theme === 'light') {
   setTheme('dark');
@@ -80,6 +80,7 @@ const handleNewPassChange=(e)=>{
     }
     e.preventDefault();
   }
+
 
   return (
     <>
