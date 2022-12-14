@@ -15,8 +15,8 @@ export const schema = gql`
   #}
 
   type Query {
-    appointments(user_id: String!): [Appointment!]! @requireAuth
-    appointment(id: Int!): Appointment @requireAuth
+    appointments(user_id: String!): [Appointment!]! @skipAuth
+    appointment(id: Int!): Appointment @skipAuth
   }
 
   input CreateAppointmentInput {

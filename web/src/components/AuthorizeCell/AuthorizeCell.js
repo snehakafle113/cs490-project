@@ -25,7 +25,7 @@ const DELETE_APPOINTMENTS_MUTATION = gql`
 `
 
 const start = '2022-12-01T12:00:00Z'
-const end = '2023-1-01T12:00:00Z'
+const end = '2023-01-01T12:00:00Z'
 const queryParams = new URLSearchParams(window.location.search)
 const code = queryParams.get('code')
 export const Loading = () => <div>Loading...</div>

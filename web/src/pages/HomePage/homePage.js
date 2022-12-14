@@ -6,6 +6,7 @@ import {
   TabPanel,
   Box,
   Center,
+  Flex,
 } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 
@@ -18,6 +19,7 @@ import TaskView from 'src/components/TaskView'
 
 //import TaskView from '../../components/Task'
 import CalendarView from '../../components/calendarView'
+import Calendar from 'src/components/Calendar'
 
 const HomePage = () => {
   const { isAuthenticated, currentUser } = useAuth()
@@ -30,21 +32,21 @@ const HomePage = () => {
           <Text fontWeight="extrabold" mt="2">
             Planner
           </Text>
-          <Tab>Tasks</Tab>
           <Tab>Calender</Tab>
+          <Tab>Tasks</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
             <Center>
               <Box w="85%">
-                <TaskView />
+                <Calendar />
               </Box>
             </Center>
           </TabPanel>
           <TabPanel>
             <Center>
               <Box w="85%">
-                <CalendarView />
+                <TaskView />
                 <></>
               </Box>
             </Center>

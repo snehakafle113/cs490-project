@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -10,14 +10,17 @@ var uid = ''
 
 const Calendar = () =>{
     const { isAuthenticated, currentUser } = useAuth()
-
-    if (isAuthenticated) {
+    if(!isAuthenticated){
+        uid = ''
+    }
+    else {
         uid = currentUser.uid
     }
+    
     return(
-        <div>
+        <>
             <CalendarViewCell user_id={uid}></CalendarViewCell>
-        </div>
+        </>
     )
 }
 

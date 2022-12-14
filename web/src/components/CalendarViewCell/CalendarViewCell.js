@@ -50,9 +50,10 @@ export const Success = ({ appointments }) => {
     const calendarRef = useRef();
     const [date, setDate] = useState('');
     const dateChange = (event) => setDate(event.target.value)
+    //console.log(appointments)
   return (
     <div>
-      <Box w='25%' marginBottom={3}>
+      <Box w="25%" marginBottom={3}>
         <Flex>
           <Input
             value={date}
@@ -75,6 +76,8 @@ export const Success = ({ appointments }) => {
       </Box>
       <FullCalendar
         ref={calendarRef}
+        contentHeight={"auto"}
+        //aspectRatio={1.35}
         initialView="dayGridMonth"
         headerToolbar={{
           left: "prev,next,today",
