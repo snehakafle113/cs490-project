@@ -51,7 +51,7 @@ const LandingPage = () => {
                   }}
                   variant='outline'
                 >
-                {isAuthenticated ? currentUser.uid : 'Sign in'}
+                {isAuthenticated ? 'Sign Out' : 'Sign in'}
                 </Button>
               </HStack>
             </Flex>

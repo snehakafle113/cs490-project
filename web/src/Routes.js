@@ -16,20 +16,15 @@ import homePage from 'src/pages/HomePage/homePage'
 const Routes = () => {
   return (
     <Router>
-      <Route path="/landing" page={LandingPage} name="landing" />
+      <Route path="/" page={LandingPage} name="landing" />
       <Set wrap={ViewsLayout}>
-        <Route path="/" page={homePage} name="home" />
+        <Route path="/home" page={homePage} name="home" />
       </Set>
       <Set wrap={ScaffoldLayout} title="Tasks" titleTo="tasks" buttonLabel="New Task" buttonTo="newTask">
-        <Route path="/tasks/new" page={TaskNewTaskPage} name="newTask" />
         <Route path="/tasks/{id:Int}/edit" page={TaskEditTaskPage} name="editTask" />
-        <Route path="/tasks/{id:Int}" page={TaskTaskPage} name="task" />
-        <Route path="/tasks" page={TaskTasksPage} name="tasks" />
-      </Set>
+=     </Set>
       <Set wrap={ScaffoldLayout} title="Statuses" titleTo="statuses" buttonLabel="New Status" buttonTo="newStatus">
         <Route path="/statuses/new" page={StatusNewStatusPage} name="newStatus" />
-        <Route path="/statuses/{id:Int}/edit" page={StatusEditStatusPage} name="editStatus" />
-        <Route path="/statuses/{id:Int}" page={StatusStatusPage} name="status" />
         <Route path="/statuses" page={StatusStatusesPage} name="statuses" />
       </Set>
       <Route notfound page={NotFoundPage} />
