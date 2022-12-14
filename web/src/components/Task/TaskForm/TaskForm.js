@@ -52,7 +52,7 @@ const TaskForm = (props) => {
 
         <HiddenField
           name="user_id"
-          defaultValue={'1'}
+          defaultValue={currentUser.uid}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}

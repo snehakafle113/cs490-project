@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react'
-
-import { Button, Box, Input, Flex } from '@chakra-ui/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
 import FullCalendar from '@fullcalendar/react'
 import timeGridPlugin from '@fullcalendar/timegrid'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import { Button, Box, Input, Flex } from '@chakra-ui/react'
 
 function CalendarView() {
   const calendarRef = useRef()

@@ -23,7 +23,7 @@ const TaskView = () => {
     uid = currentUser.uid
   }
   return (
-    <view>
+    <div>
       <SimpleGrid columns={2} spacingX="10px" spacingY="20px">
         <TasksCell user_id={uid}></TasksCell>
         <AppointmentItemCell user_id={uid}></AppointmentItemCell>
@@ -40,7 +40,7 @@ const TaskView = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </view>
+    </div>
   )
 }
 
