@@ -3,8 +3,8 @@ import { Link, routes } from '@redwoodjs/router'
 import Tasks from 'src/components/Task/Tasks'
 
 export const QUERY = gql`
-  query FindTasks {
-    tasks {
+  query FindTasks($user_id: String!) {
+    tasks(user_id: $user_id) {
       id
       created_at
       title
@@ -20,12 +20,7 @@ export const QUERY = gql`
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => {
-  return (
-    <div className="rw-text-center">
-      {'No tasks yet. '}
-        {'Create one?'}
-    </div>
-  )
+  return <div className="rw-text-center">{'No tasks yet. '}</div>
 }
 
 export const Failure = ({ error }) => (

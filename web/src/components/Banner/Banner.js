@@ -1,3 +1,6 @@
+import React from 'react'
+
+import { CalendarIcon, SettingsIcon, LockIcon } from '@chakra-ui/icons'
 import {
   Box,
   HStack,
@@ -10,11 +13,10 @@ import {
   IconButton,
 } from '@chakra-ui/react'
 import { BsPersonBadge, } from 'react-icons/bs'
-import { CalendarIcon, SettingsIcon, LockIcon, } from '@chakra-ui/icons'
-import { Link, routes } from '@redwoodjs/router'
-import Logo from 'src/assets/logo.png'
-import React from 'react'
 import { useAuth } from '@redwoodjs/auth'
+import { Link, navigate, routes } from '@redwoodjs/router'
+
+import Logo from 'src/assets/logo.png'
 
 const Banner = () => {
  const { loading, isAuthenticated, logIn, logOut, currentUser } = useAuth()
@@ -44,7 +46,7 @@ const Banner = () => {
            }}
            variant='outline'
          >
-         {isAuthenticated ? 'Sign Out' : 'Sign In'}
+         {isAuthenticated ? currentUser.email : 'Sign in'}
          </Button>
          </HStack>
      </Flex>
