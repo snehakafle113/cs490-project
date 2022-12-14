@@ -32,7 +32,6 @@
     "@fullcalendar/google-calendar": "^5.11.3",
     "@fullcalendar/react": "^5.11.3",
     "@fullcalendar/timegrid": "^5.11.3",
-<<<<<<< HEAD
     "bootstrap": "^5.2.3",
     "googleapis": "^109.0.1",
     "isemail": "^3.2.0",
@@ -43,9 +42,5 @@
     "styled-components": "^5.3.6",
     "validator": "^13.7.0",
     "zxcvbn": "^4.4.2"
-=======
-    "googleapis": "^109.0.1",
-    "styled-components": "^5.3.6"
->>>>>>> f926a141f36fd6f852862b150d982a46b724857b
   }
 }

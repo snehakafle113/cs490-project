@@ -1,5 +1,5 @@
 input {
-  background-color:#dddee4;
+  background-color:#a0a1a5;
   border-radius: 0.3rem;
   border-color: black;
   border-width: 0.1rem;
@@ -8,7 +8,8 @@ input {
 
 label {
   margin-top: 1.5rem;
-  color: blue;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,15 +30,30 @@ form {
   padding-bottom: 2rem;
   text-align: center;
   margin:0.5rem 25rem;
+  text-align: center;
   }
 
 
-  .btn{
+.btn{
   display: inline-block;
   margin-right: 20px;
 }
 
 .title{
-  margin: 1rem 3rem;
+  text-align: center;
   font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.dark {
+ background-color: #333;
+ color: #fff;
+}
+.light {
+ background-color: #fff;
+ color: #333;
+}
+
+.toggle{
+  margin: rem;
 }
