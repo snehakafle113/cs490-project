@@ -17,8 +17,6 @@ import { toast, Toaster } from '@redwoodjs/web/toast'
 import AuthorizeCell from 'src/components/AuthorizeCell'
 import TaskView from 'src/components/TaskView'
 
-//import TaskView from '../../components/Task'
-import CalendarView from '../../components/calendarView'
 import Calendar from 'src/components/Calendar'
 
 const HomePage = () => {
@@ -59,3 +57,4 @@ const HomePage = () => {
 }
 
 export default HomePage
+

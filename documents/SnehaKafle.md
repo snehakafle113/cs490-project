@@ -17,3 +17,6 @@
 - Resolved merge conflicts and merged changes to homepage, appointment cells, and banner
 
 ## Sprint 4
+- Fixed merge conflicts for profile, landing page, banner, etc
+- Worked on profile page
+- Worked on authentication with firebase / google, fixed routes

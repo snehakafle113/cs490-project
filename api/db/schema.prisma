@@ -43,3 +43,13 @@ model Status {
   status_name String
   tasks       Task[]
 }
+
+model Profile {
+  id            Int     @id @default(autoincrement())
+  FName         String
+  LName         String
+  currPass      String
+  newPass       String
+  confirmPass   String
+  createdAt DateTime @default(now())
+}

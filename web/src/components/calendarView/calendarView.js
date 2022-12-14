@@ -4,9 +4,9 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import { Button, Box, Input, Flex } from '@chakra-ui/react'
 
-function CalendarView() {
-  const calendarRef = useRef()
-  const [date, setDate] = useState('')
+const CalendarView = () => {
+  const calendarRef = useRef();
+  const [date, setDate] = useState('');
   const dateChange = (event) => setDate(event.target.value)
   return (
     <div>
@@ -44,10 +44,17 @@ function CalendarView() {
         allDaySlot={false}
         slotMinTime="06:00:00"
         slotMaxTime="23:00:00"
-        plugins={[timeGridPlugin, dayGridPlugin]}
+        timeZone="UTC"
+        plugins={[timeGridPlugin,dayGridPlugin]}
+
+        events={[{
+          title: "Event 1",
+          start: "2022-12-12T06:00:00-05:00",
+          end: "2022-12-12T08:00:00-05:00"
+        }]}
       />
     </div>
   )
 }
 
-export default CalendarView
+export default CalendarView;
