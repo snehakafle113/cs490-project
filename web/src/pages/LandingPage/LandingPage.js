@@ -41,7 +41,7 @@ const LandingPage = () => {
                   <img src={Logo} alt="image" width="50" height="100" />
                 </Box>
                 <Box>
-                  <Text fontsize="4xl" as="b">
+                  <Text fontSize="4xl" as="b">
                     EnchantingTable
                   </Text>
                 </Box>
