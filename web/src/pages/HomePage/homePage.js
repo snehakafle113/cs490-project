@@ -16,8 +16,7 @@ import TaskView from 'src/components/TaskView'
 
 import { toast, Toaster } from '@redwoodjs/web/toast'
 
-//import TaskView from '../../components/Task'
-import CalendarView from '../../components/calendarView'
+import CalendarViewCell from '../../components/calendarViewCell'
 
 const HomePage = () => {
   return (
@@ -35,7 +34,7 @@ const HomePage = () => {
           <TabPanel>
             <Center>
               <Box w="85%">
-                <CalendarView />
+                <CalendarViewCell user_id={'1111'}></CalendarViewCell>
               </Box>
             </Center>
           </TabPanel>

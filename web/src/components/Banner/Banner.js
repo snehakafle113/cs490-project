@@ -47,7 +47,7 @@ const Banner = () => {
            }}
            variant='outline'
          >
-         {isAuthenticated ? currentUser.uid : 'Sign in'}
+         {isAuthenticated ? 'Sign Out' : 'Sign In'}
          </Button>
          </HStack>
      </Flex>
