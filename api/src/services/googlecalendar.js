@@ -16,7 +16,7 @@ export const getEvents = async ({ start, end, code }) => {
     calendarId: 'primary',
     timeMin: start,
     timeMax: end,
-    maxResults: 100,
+    maxResults: 10000,
     singleEvents: true,
     orderBy: 'startTime',
   })

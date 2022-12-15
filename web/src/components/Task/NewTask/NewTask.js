@@ -1,6 +1,7 @@
 import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
+import { Flex, Center, Box } from '@chakra-ui/react'
 
 import TaskForm from 'src/components/Task/TaskForm'
 
@@ -32,7 +33,11 @@ const NewTask = () => {
         <h2 className="rw-heading rw-heading-secondary">New Task</h2>
       </header>
       <div className="rw-segment-main">
-        <TaskForm onSave={onSave} loading={loading} error={error} />
+        <Center>
+          <Flex>
+            <TaskForm onSave={onSave} loading={loading} error={error} />
+          </Flex>
+        </Center>
       </div>
     </div>
   )

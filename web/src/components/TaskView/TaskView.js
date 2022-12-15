@@ -33,37 +33,37 @@ const TaskView = () => {
   return (
     <div>
       <Center>
-      <Box w="25%" marginBottom={3}>
-        <Flex>
-          <Button marginRight={3} bg='#26619C' color='white'> prev </Button>
-          <Input
-            value={date}
-            size='sm'
-            type="date"
-            bg='white'
-            color='black'
-            marginRight={1}
-            marginTop={1}
-            onChange={dateChange}
-          />
-          <Button
-            size='sm'
-            bg='#26619C'
-            color='white'
-            marginTop={1}
-            >
-              Go
-            </Button>
-            <Button marginLeft={3} bg='#26619C' color='white'> next </Button>
-        </Flex>
-      </Box>
+        <Box w="25%" marginBottom={3}>
+          <Flex>
+            <Button marginRight={3} bg='#26619C' color='white'> prev </Button>
+            <Input
+              value={date}
+              size='sm'
+              type="date"
+              bg='white'
+              color='black'
+              marginRight={1}
+              marginTop={1}
+              onChange={dateChange}
+            />
+            <Button
+              size='sm'
+              bg='#26619C'
+              color='white'
+              marginTop={1}
+              >
+                Go
+              </Button>
+              <Button marginLeft={3} bg='#26619C' color='white'> next </Button>
+          </Flex>
+        </Box>
       </Center>
       <Button marginBottom={3} marginLeft={5} onClick={onOpen}>New Task</Button>
       <SimpleGrid columns={2} spacingX="10px" spacingY="20px">
         <TasksCell user_id={uid}></TasksCell>
         <AppointmentItemCell user_id={uid}></AppointmentItemCell>
       </SimpleGrid>
-      <Drawer isOpen={isOpen} onClose={onClose} size={'lg'}>
+      <Drawer isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader>
